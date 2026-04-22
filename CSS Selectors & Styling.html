@@ -1,0 +1,57 @@
+<!-- Module 3 CSS and CSS3
+
+CSS Selectors & Styling
+Lab Assignment
+• Task: Style the contact form (created in the HTML Forms lab) using external CSS.
+Thefollowing should be implemented:
+• Change the background color of the form.
+• Add padding and margins to form fields.
+• Style the submit button with a hover effect.
+• Use class selectors for styling common elements and ID selectors for
+uniqueelements. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form - Module 3</title>
+
+    <link rel="stylesheet" href="selectors-styling.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <form id="contactForm">
+
+        <h2>Get in Touch</h2>
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" class="input-field" required minlength="3" maxlength="30" placeholder="Enter your name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" class="input-field" required placeholder="Enter your email">
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" class="input-field" required pattern="[0-9]{10}" placeholder="10-digit number">
+
+        <label for="subject">Subject</label>
+        <select id="subject" class="input-field" required>
+            <option value="">Select Subject</option>
+            <option>General Inquiry</option>
+            <option>Support</option>
+            <option>Feedback</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" class="input-field" rows="4" required minlength="10" maxlength="200" placeholder="Write your message"></textarea>
+
+        <button id="submitBtn">Send Message</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

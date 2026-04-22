@@ -1,0 +1,82 @@
+<!-- HTML Tables
+
+Lab Assignment
+• Task: Create a product catalog table that includes the following columns:
+• Product Name
+• Product Image (use placeholder image URLs)
+• Price
+• Description
+• Availability (in stock, out ofstock)
+Additional Requirements:
+• Use theadfor the table header.
+• Add a border and some basic styling using inline CSS.
+• Use colspanor rowspanto merge cells where applicable -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced Product Catalog</title>
+</head>
+
+<body style="font-family: Arial; background:#f4f7fb; margin:0;">
+
+<h2 style="text-align:center; padding:20px; color:#333;">Product Catalog</h2>
+
+<table border="1" 
+style="width:90%; margin:auto; border-collapse:collapse; text-align:center; background:white; border-radius:10px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+
+    <thead style="background:linear-gradient(45deg,#4facfe,#00f2fe); color:white;">
+        <tr>
+            <th style="padding:12px;">Product</th>
+            <th style="padding:12px;">Image</th>
+            <th style="padding:12px;">Price</th>
+            <th style="padding:12px;">Description</th>
+            <th style="padding:12px;">Availability</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr style="transition:0.3s;" onmouseover="this.style.background='#f1f9ff'" onmouseout="this.style.background='white'">
+            <td style="padding:12px; font-weight:bold;">Laptop</td>
+            <td style="padding:12px;">
+                <img src="https://picsum.photos/100?1" style="border-radius:8px;">
+            </td>
+            <td style="padding:12px; color:#2e7d32;">₹50,000</td>
+            <td style="padding:12px;">High performance laptop for work</td>
+            <td style="padding:12px; color:green; font-weight:bold;">In Stock</td>
+        </tr>
+
+        <tr style="transition:0.3s;" onmouseover="this.style.background='#f1f9ff'" onmouseout="this.style.background='white'">
+            <td style="padding:12px; font-weight:bold;">Smartphone</td>
+            <td style="padding:12px;">
+                <img src="https://picsum.photos/100?2" style="border-radius:8px;">
+            </td>
+            <td style="padding:12px; color:#2e7d32;">₹20,000</td>
+            <td style="padding:12px;">Latest Android smartphone</td>
+            <td style="padding:12px; color:red; font-weight:bold;">Out of Stock</td>
+        </tr>
+
+        <tr style="transition:0.3s;" onmouseover="this.style.background='#f1f9ff'" onmouseout="this.style.background='white'">
+            <td style="padding:12px; font-weight:bold;">Headphones</td>
+            <td style="padding:12px;">
+                <img src="https://picsum.photos/100?3" style="border-radius:8px;">
+            </td>
+            <td style="padding:12px; color:#2e7d32;">₹2,000</td>
+            <td style="padding:12px;">Noise cancelling headphones</td>
+            <td style="padding:12px; color:green; font-weight:bold;">In Stock</td>
+        </tr>
+
+        <tr>
+            <td colspan="5" style="padding:15px; background:#eef3f8; font-weight:bold; color:#555;">
+                ✨ More premium products coming soon...
+            </td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+</body>
+</html>

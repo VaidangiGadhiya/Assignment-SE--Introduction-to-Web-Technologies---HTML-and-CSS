@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HTML5 Advanced</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #fdfbff, #eef4ff);
+    text-align: center;
+    padding: 30px;
+}
+
+.section {
+    margin: 25px auto;
+    padding: 25px;
+    max-width: 700px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+/* VIDEO */
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* SVG */
+.rotate {
+    transform: rotate(15deg);
+    transition: 0.3s;
+}
+
+.rotate:hover {
+    transform: rotate(0deg) scale(1.1);
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>HTML5 Media & Graphics</h1>
+
+<div class="section">
+    <h2>Video</h2>
+
+    <!-- WORKING VIDEO -->
+    <video autoplay muted loop controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    </video>
+
+</div>
+
+<div class="section">
+    <h2>Canvas</h2>
+    <canvas id="c" width="300" height="200"></canvas>
+</div>
+
+<div class="section">
+    <h2>SVG</h2>
+    <svg width="300" height="200">
+        <rect x="50" y="50" width="80" height="80" fill="purple" class="rotate"/>
+        <circle cx="200" cy="100" r="40" fill="pink" class="rotate"/>
+    </svg>
+</div>
+
+<script>
+var c = document.getElementById("c");
+var ctx = c.getContext("2d");
+
+ctx.translate(150,100);
+ctx.rotate(Math.PI/6);
+ctx.fillStyle = "purple";
+ctx.fillRect(-50,-30,100,60);
+</script>
+
+</body>
+</html>
